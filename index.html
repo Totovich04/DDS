@@ -1,59 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<title>Tiendas DDS</title>
+  <link type="text/css" rel="stylesheet" href="estilos.css" />
 </head>
 <body>
-    <main>
-        <form id="formularioMatriculacion" action="#" method="post">
-            <label for="nombre">Nombre y Apellido</label>
-            <input type="text" id="nombre" name="nombre" required /><br /><br />
+<div class="container">
+	<header>
+		<h1>Tiendas DDS</h1>
+		<h2>Art&iacute;culos</h1>
+	</header>
+	<nav>
+	  <ul>
+		<li><a href="#">Art&iacute;culos</a></li>
+		<li><a href="#">Mi Compra</a></li>
+		<li><a href="#">Sucursales</a></li>
+	  </ul>
+	</nav>
 
-            <label for="contraseña">Contraseña</label>
-            <input type="password" id="contraseña" name="contraseña" required minlength="8" /> <br /><br />
+	<article>
+		<div id="listaCategorias">Categor&iacute;a: 
+			<select id="categorias">
+				<option value="1">Electrodom&eacute;sticos</option>
+				<option value="2">Audio</option>	
+				<option value="3">Jard&iacute;n</option>	
+			</select>
+		</div>
+		<div id="listaArticulos">
+			<table id="tablaArticulos">
 
-            <label for="fecha de nacimiento">Fecha de Nacimiento</label>
-            <input type="date" id="fecha de nacimiento" name="fecha de nacimiento" required /> <br /><br />
+				<tr>
+					<td>
+						<div class="containerArticulo">
+							<div class="imagenArticulo">
+								<img src="imagenes/art01.jpg">
+							</div>
+							<div class="datosArticulo">
+								<p>Art&iacute;culo 1</p>
+								<p>Precio: $32.99</p>
+								<p>Cantidad: 12</p>
+								<button id="Comprar_01" class="botonComprar">Comprar</button>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="imagenArticulo">
+							<img src="imagenes/art02.jpg">
+						</div>
+						<div class="datosArticulo">
+							<p>Art&iacute;culo 2</p>
+							<p>Precio: $26.99</p>
+							<p>Cantidad: 17</p>
+							<button id="Comprar_01" class="botonComprar">Comprar</button>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="containerArticulo">
+							<div class="imagenArticulo">
+								<img src="imagenes/art05.jpg">
+							</div>
+							<div class="datosArticulo">
+								<p>Art&iacute;culo 3</p>
+								<p>Precio: $124.99</p>
+								<p>Cantidad: 14</p>
+								<button id="Comprar_01" class="botonComprar">Comprar</button>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="imagenArticulo">
+							<img src="imagenes/art06.jpg">
+						</div>
+						<div class="datosArticulo">
+							<p>Art&iacute;culo 4</p>
+							<p>Precio: $17.00</p>
+							<p>Cantidad: 98</p>
+							<button id="Comprar_01" class="botonComprar">Comprar</button>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="containerArticulo">
+							<div class="imagenArticulo">
+								<img src="imagenes/art07.jpg">
+							</div>
+							<div class="datosArticulo">
+								<p>Art&iacute;culo 5</p>
+								<p>Precio: $12.99</p>
+								<p>Cantidad: 115</p>
+								<button id="Comprar_01" class="botonComprar">Comprar</button>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="imagenArticulo">
+							<img src="imagenes/art08.jpg">
+						</div>
+						<div class="datosArticulo">
+							<p>Art&iacute;culo 6</p>
+							<p>Precio: $33.99</p>
+							<p>Cantidad: 17</p>
+							<button id="Comprar_01" class="botonComprar">Comprar</button>
+						</div>
+					</td>
+				</tr>
 
-            <label for="edad">Edad</label>
-            <input type="number" id="edad" name="edad" required min="18" max="100" /><br /><br />
-
-            <label for="genero">Genero</label> <br>
-            <input type="radio" name="masculino" id="genero">Masculino<br />
-            <input type="radio" name="femenino" id="genero">Femenino <br>
-            <input type="radio" name="otro" id="genero">Otros <br> <br>
-
-            <label for="materia favorita">Materia Favorita</label>
-            <select name="materia" id="materia">
-                <option value="">Seleccione</option>
-                <option value="algebra">Algebra</option>
-                <option value="am1">AnalisisMatematico1</option>
-                <option value="f1">Fisica1</option>
-            </select>
-            <br><br>
-            
-            
-            <label for="habilidades">Habilidades</label><br/>
-            <input type="checkbox" id="bicicleta" name="habilidades" value="bicicleta" />Bicicleta<br />
-            <input type="checkbox" name="habilidades" id="nadar" value="nadar">Nadar<br />
-            <input type="checkbox" name="habilidades" id="futbol" value="futbol">Futbol<br />
-            <br/>
-
-            <label for="nivel de interes">Nivel de Interes</label><br />
-            <select name="nivel de interes" id="nivel de interes" required>
-                <option value="">Seleccione</option>
-                <option value="bajo">Bajo</option>
-                <option value="medio">Medio</option>
-                <option value="alto">Alto</option>
-            </select><br /><br />
-
-            <label for="comentarios">Comentarios Adicionales</label><br />
-            <textarea name="comentarios" id="comentarios" cols="30" rows="10">Ingrese su respuesta</textarea><br /><br />
-
-            <button type="submit">Subir</button>
-        </form>
-    </main>
+			
+			</table>
+		</div>
+	</article>
+	<footer>
+		Copyright &copy; DDS 2024
+	</footer>
+</div>
 </body>
 </html>
